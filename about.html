@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>DETEC - PERU</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        #fade {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+        #light {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 600px;
+            max-height: 360px;
+            margin-left: -300px;
+            margin-top: -180px;
+            border: 0 solid #FFF;
+            z-index: 1002;
+            overflow: visible;
+        }
+
+        #boxclose {
+            float: right;
+            cursor: pointer;
+            color: #fff;
+            border: 1px solid #AEAEAE;
+            border-radius: 3px;
+            background: #222222;
+            font-size: 31px;
+            font-weight: bold;
+            display: inline-block;
+            line-height: 0;
+            padding: 11px 3px;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            z-index: 1002;
+            opacity: 0.9;
+        }
+
+        .boxclose:before {
+            content: "×";
+        }
+
+        #fade:hover ~ #boxclose {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <video id="VisaChipCardVideo" width="600" controls>
+            <source src="images/video_2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="preloader"></div>
+        <header class="main-header">
+            <div class="header-upper">
+                <div class="top-bar">
+                    <div class="auto-container clearfix">
+                        <div class="top-right">
+                            <ul class="clearfix">
+                                <li>
+                                    <img src="./images/icons/phone.png" width="13px" height="13px" alt="Teléfono"
+                                         style="margin-right: 4px"/> (511) 248 3096
+                                </li>
+                                <li>
+                                    <a href="mailto:contacto@detec-peru.com" target="_blank">
+                                        <img src="./images/icons/email.png" width="16px" height="auto"
+                                             alt="Correo electrónico" style="margin-right: 4px"/>
+                                        contacto@detec-peru.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/desarrollostecnicosperu" target="_blank">
+                                        <img src="./images/icons/facebook.png" width="16px" height="16px"
+                                             alt="Facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/detec_peru" target="_blank">
+                                        <img src="./images/icons/instagram.png" width="16px" height="16px"
+                                             alt="Instagram"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="auto-container">
+                    <div class="clearfix">
+                        <div class="pull-left logo-outer">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo-detec.png" alt="Detec" title="Detec">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-lower">
+                <div class="auto-container clearfix">
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="about.html">Nosotros</a></li>
+                                <li><a href="services.html">Nuestros Servicios</a></li>
+                                <li><a href="technologies.html">SIGA</a></li>
+                                <li><a href="docs.html">Custodia</a></li>
+                                <li><a href="contact.html">Contáctenos</a></li>
+                                <li><a href="workus.html">Trabaja con Nosotros</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-title"
+                 style="background-image:url(images/slider/nosotros-header.png); margin-bottom: 40px">
+            <!--            <div class="page-title-content">-->
+            <!--                <div class="line"></div>-->
+            <!--                <h1>Nosotros</h1>-->
+            <!--                <div class="line"></div>-->
+            <!--            </div>-->
+        </section>
+
+        <section class="default-two-col" style="margin-bottom: 20px;">
+            <div class="auto-container">
+                <div class="row clearfix why-us-content">
+                    <div class="col-md-5 col-sm-12 col-xs-12 content-column">
+                        <article class="inner-box">
+                            <h2>Bienvenidos a DETEC - PERU.</h2>
+                            <div class="text">
+                                <p>
+                                    En DETEC PERU, tras una breve evaluación de las necesidades expresadas por nuestros
+                                    clientes, identificamos en conjunto puntos de trabajo clave que nos permiten
+                                    optimizar el requerimiento. Luego del análisis correspondiente, proveemos una gama
+                                    de soluciones flexibles y escalables que engloban el proceso de suministro de
+                                    equipamiento, integración de sistema y la operación de los mismos. Generamos
+                                    herramientas de Outsourcing, con lo cual facilitamos que nuestros clientes se
+                                    centren en su competencia medular logrando así la reducción y la eficiencia de
+                                    costos.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-7 col-sm-12 col-xs-12 content-column">
+                        <article class="why-us-column style-two">
+                            <h2 class="styled-title">¿POR QU&Eacute; ELEGIRNOS?</h2>
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Equipo calificado</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/equipo.png)"></div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Servicio especializado</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/servicio_2.png)"></div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Seguimiento de procesos</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/procesos.png)"></div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Sistema de gesti&oacute;n y activos</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/sistema.png)"></div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Infraestructura adecuada</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/infraestructura_2.png)"></div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-xs-6 column">
+                                    <div class="why-us-title">Atenci&oacute;n personalizada</div>
+                                    <div class="why-us-icon"
+                                         style="background-image:url(images/why-us/atencion.png)"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="default-services no-padd-top">
+            <div class="auto-container">
+                <div id="fade" onClick="lightbox_close();"></div>
+                <div style="margin-bottom: 40px; text-align: center;">
+                    <a href="#" onclick="lightbox_open();">
+                        <img src="images/slider/video_thumbnail_2.png" alt="Nosotros" width="600" height="auto"/>
+                    </a>
+                </div>
+                <!--<video src="images/video.mp4" width="100%" height="480" controls></video>-->
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
+                            <section class="blog-container three-column-blog">
+                                <div class="row clearfix">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 blog-post wow fadeInLeft"
+                                         data-wow-delay="0ms" data-wow-duration="1500ms">
+                                        <article class="column-inner">
+                                            <div class="lower-part" style="text-align: initial;">
+                                                <img src="images/logo-footer.png" style="width: 200px;">
+                                                <br><br>
+                                                <div class="post-text">
+                                                    <ul
+                                                            class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                                                        <li class="ftco-animate">Siguenos:</li>
+                                                        <li class="ftco-animate">
+                                                            <a href="https://www.linkedin.com/company/detec_per%C3%BA/?originalSubdomain=pe"
+                                                               target="_blank"><span class="fa fa-linkedin"
+                                                                                     style="font-size: 30px;padding-right: 5px;"></span></a>
+                                                            <a href="https://www.facebook.com/desarrollostecnicosperu"
+                                                               target="_blank"><span class="fa fa-facebook"
+                                                                                     style="font-size: 30px;padding-right: 5px;"></span></a>
+                                                            <a href="https://www.instagram.com/detec_peru/?fbclid=IwAR1l93XvwZW2zhhrjTrPhGLTd6vjZ4eDxogdixBIz5AX0zRZ_EiydTSTnzo"
+                                                               target="_blank"><span class="fa fa-instagram"
+                                                                                     style="font-size: 30px;padding-right: 5px;"></span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 blog-post wow fadeInLeft"
+                                         data-wow-delay="0ms" data-wow-duration="1500ms">
+                                        <article class="column-inner">
+                                            <!--<figure class="image-box">
+                                            <img src="images/resource/infraestructura-1.jpeg" alt="" >
+                                        </figure>-->
+                                            <div class="lower-part">
+                                                <div class="post-title">
+                                                    <h3 style="color: white !important; text-align: initial;">
+                                                        Información del contacto</h3>
+                                                </div>
+                                                <div class="post-text">
+                                                    <ul>
+                                                        <li><span class="icon fa fa-map-marker"
+                                                                  style="padding-right: 10px;"></span>Kilometro 25.5
+                                                            Panamericana Sur Conchan, Villa el Salvador
+                                                        </li>
+                                                        <li><span class="icon fa fa-phone"
+                                                                  style="padding-right: 10px;"></span>(511) 248 3096
+                                                        </li>
+                                                        <li><span class="icon fa fa-paper-plane"
+                                                                  style="padding-right: 10px;"></span>contacto@detec-peru.com
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--End pagewrapper-->
+
+    <div class="btn-whatsapp">
+        <a href="https://wa.me/+51979947359" target="_blank">
+            <img src="images/btn_whatsapp.png" alt="">
+        </a>
+    </div>
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top"><span class="icon flaticon-sky8"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        window.document.onkeydown = function (e) {
+            if (!e) {
+                e = event;
+            }
+            if (e.keyCode === 27) {
+                lightbox_close();
+            }
+        };
+
+        function lightbox_open() {
+            let lightBoxVideo = document.getElementById('VisaChipCardVideo');
+            window.scrollTo(0, 0);
+            document.getElementById('light').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+            lightBoxVideo.play();
+        }
+
+        function lightbox_close() {
+            let lightBoxVideo = document.getElementById('VisaChipCardVideo');
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+            lightBoxVideo.pause();
+        }
+    </script>
+    <script type="text/javascript">
+        $('.owl-carousel-gallery').owlCarousel({
+            loop: true,
+            margin: 10,
+            //nav:true,
+            autoplay: 1,
+            smartSpeed: 800,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+    </script>
+</body>
+</html>
